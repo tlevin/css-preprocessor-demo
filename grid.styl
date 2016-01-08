@@ -1,0 +1,14 @@
+// Form the grid
+for i in 1 2 3 4 5 6
+  for j in 1 ... i
+    .grid-{j}-{i}
+      width 100 * (j / i)%
+      float left      
+
+// Declare the row, using a clearFix
+.grid-row
+  width 100%
+  &:after
+    content ""
+    display table
+    clear both
