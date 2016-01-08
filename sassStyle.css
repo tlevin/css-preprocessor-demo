@@ -1,0 +1,39 @@
+.box1 {
+  background: red;
+  color: white; }
+
+.box2 {
+  color: red; }
+  .box2:hover {
+    color: yellow; }
+
+.box3 {
+  z-index: 5; }
+
+.box1 {
+  height: 30px;
+  width: 30px; }
+
+.box2 {
+  height: 30px;
+  width: 30px; }
+
+.box3 {
+  height: 30px;
+  width: 30px; }
+
+.box4 {
+  height: 30px;
+  width: 30px; }
+
+.box5 {
+  height: 30px;
+  width: 30px; }
+
+.box2 {
+  background-color: #bbbbbb; }
+
+.box1 {
+  padding: 50px; }
+
+/*# sourceMappingURL=sassStyle.css.map */

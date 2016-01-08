@@ -1,0 +1,69 @@
+// Variables
+
+@primaryColor: red;
+@secondaryColor: blue;
+@accentColor: green;
+@textColor: white;
+
+// Using Variables
+
+.box1 {
+  background: @primaryColor;
+  color: @textColor;
+}
+
+// Nested, & refers to parent selector
+
+.box2 {
+  color: red;
+  &:hover {
+    color:yellow;
+  }
+}
+
+// Use interpolation for selectors
+
+@greatBox: box3;
+
+.@{greatBox} {
+  z-index: 5;
+}
+
+// Recursion loop for multiple selectors
+
+.build-box(@n, @i: 1) when (@i =< @n) {
+  .box@{i} {
+    height: 30px;
+    width: 30px;
+  }
+  .build-box(@n, (@i + 1));
+}
+
+.build-box(5);
+
+// Operations are available
+
+@totalWidth: 20px + 10px;
+
+@lightenedColor: #888+#333;
+@darkenedColor: #888-#333;
+
+.box2 {
+  background-color: @lightenedColor
+}
+
+// Mix-ins are very useful
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box1 {
+  .border-radius(5px);
+}
+
+// Functions can be used
+
+// There are countless functions built into Less

@@ -1,0 +1,46 @@
+.box1 {
+  background: #f00;
+  color: #fff;
+}
+.box2 {
+  color: #f00;
+}
+.box2:hover {
+  color: #ff0;
+}
+.box3 {
+  z-index: 5;
+}
+.box1 {
+  height: 30px;
+  width: 30px;
+  background: #00f;
+}
+.box2 {
+  height: 30px;
+  width: 30px;
+  background: #00f;
+}
+.box3 {
+  height: 30px;
+  width: 30px;
+  background: #00f;
+}
+.box4 {
+  height: 30px;
+  width: 30px;
+  background: #00f;
+}
+.box5 {
+  height: 30px;
+  width: 30px;
+  background: #00f;
+}
+.box1 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.box1 {
+  padding: 50px;
+}

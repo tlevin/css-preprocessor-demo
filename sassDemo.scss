@@ -1,0 +1,70 @@
+// Variables
+
+$primaryColor: red;
+$secondaryColor: blue;
+$accentColor: green;
+$textColor: white;
+
+// Using Variables
+
+.box1 {
+  background: $primaryColor;
+  color: $textColor;
+}
+
+// Nested, & refers to parent selector
+
+.box2 {
+  color: red;
+  &:hover {
+    color:yellow;
+  }
+}
+
+// Use interpolation for selectors
+
+$greatBox: box3;
+
+.#{$greatBox} {
+  z-index: 5;
+}
+
+// Iterate for multiple selectors
+
+@for $i from 1 through 5 {
+  .#{'box' + $i} {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+// Operations are available
+
+$totalWidth: 20px + 10px;
+
+$lightenedColor: #888+#333;
+$darkenedColor: #888-#333;
+
+.box2 {
+  background-color: $lightenedColor
+}
+
+// Mix-ins are very useful
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Functions can be used
+
+// There are countless functions built into Sass
+
+@function add($a, $b) {
+  @return ($a + $b)
+}
+
+.box1 {
+  padding: add(30px, 20px);
+}

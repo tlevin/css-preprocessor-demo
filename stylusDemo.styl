@@ -1,0 +1,64 @@
+// Variables
+
+primaryColor = red
+secondaryColor = blue
+accentColor = green
+textColor = white
+
+// Using Variables
+
+.box1
+  background primaryColor
+  color textColor
+
+// Nested, & refers to parent selector
+
+.box2
+  color red
+  &:hover
+    color yellow
+
+// Use interpolation for selectors
+
+greatBox = '.box3'
+
+{greatBox}
+  z-index 5
+
+// Iterate for multiple selectors
+
+for boxNumber in 1 2 3 4 5
+  .box{boxNumber}
+    height 30px
+    width 30px
+    background secondaryColor
+
+// Operations are available
+
+totalWidth = 20px + 10px
+
+lightenedColor = #888 + 50%
+darkenedColor = #888 - 50%
+
+// Mixins are very useful
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+.box1
+  border-radius(5px)
+
+// Functions can be used
+
+add(a, b)
+  a + b
+
+.box1
+  padding add(30px, 20px)
+
+// Built-in functions are included
+
+// Push, pop, shift and unshift for arrays
+// darken, lighten, saturate, desaturate and much more!
