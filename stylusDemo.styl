@@ -1,8 +1,14 @@
 /*
 To Install: npm install -g stylus
 To Compile: stylus -w input.styl -o output.css
-
+To Minify: stylus -w input.styl -c output.css
 */
+
+// You can require other stylus files
+@require "grid.styl"
+
+// You can also import other css files
+@import 'grid.css'
 
 // Variables
 
@@ -26,9 +32,9 @@ textColor = white
 
 // Use interpolation for selectors
 
-greatBox = '.box3'
+greatBox = 3 + 4
 
-{greatBox}
+.box{greatBox}
   z-index 5
 
 // Iterate for multiple selectors
@@ -54,7 +60,7 @@ border-radius(n)
   border-radius n
 
 .box1
-  border-radius(5px)
+  border-radius 5px
 
 // Functions can be used
 
@@ -68,3 +74,9 @@ add(a, b)
 
 // Push, pop, shift and unshift for arrays
 // darken, lighten, saturate, desaturate and much more!
+
+// You can extend existing classes
+.center
+  text-align center
+  font-size 4em
+  @extend .grid-1-1
